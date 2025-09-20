@@ -6,27 +6,30 @@ namespace BankAccountApp
         {
             InitializeComponent();
 
-            BankAccount bankaccount = new BankAccount();
-            bankaccount.Owner = "Ahmed Alaa";
-            bankaccount.AccountNumber = Guid.NewGuid();
-            bankaccount.Balance = 250;
+            BankAccount bankaccount = new BankAccount("Ahmed Alaa");
+            //bankaccount.Owner = "Ahmed Alaa";
+            //bankaccount.AccountNumber = Guid.NewGuid();
+            //bankaccount.Balance = 250;
 
 
-            BankAccount bankaccount2 = new BankAccount();
-            bankaccount2.Owner = "Mohamed Alaa";
-            bankaccount2.AccountNumber = Guid.NewGuid();
-            bankaccount2.Balance = 9999;
+            BankAccount bankaccount2 = new BankAccount("Mohamed Alaa");
+            //bankaccount2.Owner = "Mohamed Alaa";
+            //bankaccount2.AccountNumber = Guid.NewGuid();
+            //bankaccount2.Balance = 9999;
 
 
-            BankAccount bankaccount3 = new BankAccount();
-            bankaccount3.Owner = "Elon Mask";
-            bankaccount3.AccountNumber = Guid.NewGuid();
-            bankaccount3.Balance = 5000;
+            BankAccount bankaccount3 = new BankAccount("Elon Mask");
+            //bankaccount3.Owner = "Elon Mask";
+            //bankaccount3.AccountNumber = Guid.NewGuid();
+            //bankaccount3.Balance = 5000;
+
+            BankAccount bankaccount4 = new BankAccount("Mark joe");
 
             List<BankAccount> bankAccounts = new List<BankAccount>();
             bankAccounts.Add(bankaccount);
             bankAccounts.Add(bankaccount2);
             bankAccounts.Add(bankaccount3);
+            bankAccounts.Add(bankaccount4);
 
 
             BankAccountsGrid.DataSource = bankAccounts;
