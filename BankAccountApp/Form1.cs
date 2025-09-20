@@ -66,7 +66,17 @@ namespace BankAccountApp
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (BankAccountsGrid.SelectedRows.Count == 1 && AmountNum.Value > 0)
+            {
+                BankAccount selectedAccount = BankAccountsGrid.SelectedRows[0].DataBoundItem as BankAccount;
 
+                string message = selectedAccount.Withdraw(AmountNum.Value);
+                    RefreshGrid();
+                    AmountNum.Value = 0;
+                MessageBox.Show(message);
+
+
+            }
         }
 
         private void OwnerName_TextChanged(object sender, EventArgs e)
@@ -77,6 +87,26 @@ namespace BankAccountApp
         {
             BankAccountsGrid.DataSource = null;
             BankAccountsGrid.DataSource = bankAccounts;
+        }
+
+        private void Depositebtn_Click(object sender, EventArgs e)
+        {
+            if (BankAccountsGrid.SelectedRows.Count == 1 && AmountNum.Value > 0)
+            {
+                BankAccount selectedAccount = BankAccountsGrid.SelectedRows[0].DataBoundItem as BankAccount;
+
+                string message = selectedAccount.Deposite(AmountNum.Value); 
+                RefreshGrid();
+                AmountNum.Value = 0;
+
+
+                MessageBox.Show(message);
+            }
+        }
+
+        private void AmountNum_ValueChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

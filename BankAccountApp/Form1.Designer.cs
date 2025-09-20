@@ -76,6 +76,7 @@
             AmountNum.Name = "AmountNum";
             AmountNum.Size = new Size(281, 47);
             AmountNum.TabIndex = 3;
+            AmountNum.ValueChanged += AmountNum_ValueChanged;
             // 
             // BankAccountsGrid
             // 
@@ -96,6 +97,7 @@
             Depositebtn.Text = "Deposite";
             Depositebtn.TextAlign = ContentAlignment.BottomCenter;
             Depositebtn.UseVisualStyleBackColor = true;
+            Depositebtn.Click += Depositebtn_Click;
             // 
             // Withdrawbtn
             // 
