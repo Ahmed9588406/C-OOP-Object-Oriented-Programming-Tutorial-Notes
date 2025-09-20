@@ -68,6 +68,7 @@
             OwnerName.Name = "OwnerName";
             OwnerName.Size = new Size(281, 47);
             OwnerName.TabIndex = 2;
+            OwnerName.TextChanged += OwnerName_TextChanged;
             // 
             // AmountNum
             // 
